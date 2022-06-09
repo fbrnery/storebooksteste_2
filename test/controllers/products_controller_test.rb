@@ -7,7 +7,6 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
   end
 
-  
   test "should get index" do
     get products_url
     assert_response :success
@@ -69,13 +68,6 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to products_url
-  end
 
-  test "should destroy product" do
-    assert_difference('Product.count', -1) do
-      delete product_url(@product)
-    end
-
-    assert_redirected_to products_url
   end
 end
