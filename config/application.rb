@@ -22,5 +22,7 @@ module Depot
     config.filter_parameters += [ :credit_card_number ]
 
     config.middleware.use I18n::JS::Middleware
+
+    config.autoload_paths += %W(#{Rails.root}/lib)
   end
 end
