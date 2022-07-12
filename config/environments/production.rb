@@ -4,24 +4,6 @@ Rails.application.configure do
   # Prepare the ingress controller used to receive mail
   # config.action_mailbox.ingress = :relay
 
-
-  Rails.application.configure do
-  # Prepare the ingress controller used to receive mail
-  # config.action_mailbox.ingress = :relay
-
-
-    config.action_mailer.delivery_method = :test
-  
-    config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: "domain.of.sender.net",
-    authentication: "plain",
-    user_name: "dave",
-    password: "secret",
-    enable_starttls_auto: true
-    }
-
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
