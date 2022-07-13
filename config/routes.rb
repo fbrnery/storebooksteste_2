@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   resources :support_requests, only: [ :index, :update ]
 
   scope '(:locale)' do
+    #resources :store do
+      #get 'store/index'
     resources :orders
     resources :line_items
     resources :carts
