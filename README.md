@@ -23,3 +23,4 @@ Things you may want to cover:
 
 * ...
 # web_store_rails-pilot
+# app_depot
