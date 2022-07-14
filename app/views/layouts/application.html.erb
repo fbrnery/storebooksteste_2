@@ -34,9 +34,9 @@
       
         <ul>
           <li><a href="#"><%= link_to "Home", store_index_path%></a></a></li>
-          <li><a href="#"><%= link_to "Questions", home_questions_path%></a></a></li>
-          <li><a href="#"><%= link_to "News", home_news_path%></a>/a></li>
-          <li><a href="#"><%= link_to "Contact", home_contact_path%></a></a></li>
+          <li><a href="#"><%= link_to "Questions", store_questions_path%></a></a></li>
+          <li><a href="#"><%= link_to "News", store_news_path%></a>/a></li>
+          <li><a href="#"><%= link_to "Contact", store_contact_path%></a></a></li>
         </ul>
 
         <% if session[:user_id] %>
