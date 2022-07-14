@@ -36,15 +36,15 @@
           display: inline;
         }
         input[type="submit"] {
-          background-color: #282;
+          background-color: rgb(34, 44, 136);
           border-radius: 0.354em;
-          border: solid thin #141;
+          border: solid thin rgb(199, 201, 209);
           color: white;
           font-size: 1em;
           padding: 0.354em 1em;
         }
         input[type="submit"]:hover {
-          background-color: #141;
+          background-color: rgb(21, 46, 119);
         }
       }
   //

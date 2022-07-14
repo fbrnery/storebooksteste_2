@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pragprog Books Online Store</title>
+    <title>Store Books</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag 'application', media: 'all',
@@ -18,18 +19,11 @@
   </head>
 
   <body>
-    <header class="main">
-      <aside>
-        <%= form_tag store_index_path, class: 'locale' do %>
-          <%= select_tag 'set_locale', 
-            options_for_select(LANGUAGES, I18n.locale.to_s),
-            onchange: 'this.form.submit()' %>
-          <%= submit_tag 'submit', id: "submit_locale_change" %>
-        <% end %>
-      </aside>
-      <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %>
-      <h1><%= @page_title %></h1>
+  <div class="container-fluid">
+    <header>
+      <%= render 'aplication/main.html.erb' %>
     </header>
+    
     <section class="content">
       <nav class="side_nav">
 
@@ -37,7 +31,7 @@
 
           <%= render_if @cart && @cart.line_items.any?, @cart %>
         </div>
-
+      
         <ul>
           <li><a href="/"><%= t('.home') %></a></li>
           <li><a href="/questions"><%= t('.questions') %></a></li>
@@ -58,7 +52,10 @@
       </nav>
       <main class='<%= controller.controller_name %>'>
         <%= yield %>
+        <%= render 'aplication/rodape.html.erb' %>
       </main>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </div>
   </body>
 </html>
