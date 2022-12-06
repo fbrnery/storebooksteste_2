@@ -26,3 +26,4 @@ Things you may want to cover:
 # app_depot
 # storebooksteste
 # app_storebooksteste_2
+# storebooksteste_2
